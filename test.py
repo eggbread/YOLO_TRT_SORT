@@ -3,9 +3,9 @@ import time
 import cv2
 import pycuda.autoinit
 import tensorrt as trt
-from tensorrt_demos.utils.yolo_classes import get_cls_dict
-from tensorrt_demos.utils.yolo_with_plugins import TrtYOLO
-from tensorrt_demos.utils.visualization import BBoxVisualization
+from Detection.utils.yolo_classes import get_cls_dict
+from Detection.utils.yolo_with_plugins import TrtYOLO
+from Detection.utils.visualization import BBoxVisualization
 from sort import *
 import numpy as np
 

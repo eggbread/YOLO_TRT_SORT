@@ -18,7 +18,7 @@ import pycuda.driver as cuda
 
 
 try:
-    ctypes.cdll.LoadLibrary('./tensorrt_demos/plugins/libyolo_layer.so')
+    ctypes.cdll.LoadLibrary('./Detection/plugins/libyolo_layer.so')
 except OSError as e:
     raise SystemExit('ERROR: failed to load ./plugins/libyolo_layer.so.  '
                      'Did you forget to do a "make" in the "./plugins/" '
@@ -234,7 +234,7 @@ class TrtYOLO(object):
     """TrtYOLO class encapsulates things needed to run TRT YOLO."""
 
     def _load_engine(self):
-        TRTbin = './tensorrt_demos/yolo/%s.trt' % self.model
+        TRTbin = './Detection/yolo/%s.trt' % self.model
         with open(TRTbin, 'rb') as f, trt.Runtime(self.trt_logger) as runtime:
             return runtime.deserialize_cuda_engine(f.read())
 
