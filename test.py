@@ -43,8 +43,8 @@ class Vision(object):
                 end = time.time()
                 print(1/(end-start))
                 start = end
-                # cv2.imshow("frame",img)
-                # cv2.waitKey(1)
+                cv2.imshow("frame",img)
+                cv2.waitKey(1)
 
 if __name__=='__main__':
     v = Vision(0,416,416)
